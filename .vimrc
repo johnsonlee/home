@@ -25,3 +25,6 @@ set term=screen-256color
 
 syntax enable
 syntax on
+
+nnoremap <silent> <Tab> :bn<CR>
+nnoremap <silent> <S-Tab> :bp<CR>
