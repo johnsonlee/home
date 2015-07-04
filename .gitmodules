@@ -1,5 +1,5 @@
-[submodule ".vim/bundle/syntastic"]
-	path = .vim/bundle/syntastic
+[submodule ".vim/bundle/vim-syntastic"]
+	path = .vim/bundle/vim-syntastic
 	url = https://github.com/scrooloose/syntastic
 [submodule ".vim/bundle/vim-gitgutter"]
 	path = .vim/bundle/vim-gitgutter
@@ -10,8 +10,8 @@
 [submodule ".vim/bundle/vim-markdown"]
 	path = .vim/bundle/vim-markdown
 	url = https://github.com/plasticboy/vim-markdown
-[submodule ".vim/bundle/tagbar"]
-	path = .vim/bundle/tagbar
+[submodule ".vim/bundle/vim-tagbar"]
+	path = .vim/bundle/vim-tagbar
 	url = https://github.com/majutsushi/tagbar
 [submodule ".vim/bundle/vim-javascript"]
 	path = .vim/bundle/vim-javascript
