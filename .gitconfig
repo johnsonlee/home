@@ -1,5 +1,13 @@
 [user]
 	name = johnsonlee
 	email = g.johnsonlee@gmail.com
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
 [color]
 	ui = true
+	diff = auto
+	status = auto
+	branch = auto
+[remote "origin"]
+	push = refs/heads/*:refs/for/*
