@@ -7,6 +7,11 @@
 let g:airline#extensions#tabline#enabled=1
 let g:airline_powerline_fonts=1
 
+" vertical line indentation
+let g:indentLine_color_term = 234
+let g:indentLine_color_gui = '#252525'
+let g:indentLine_char = '│'
+
 execute pathogen#infect()
 
 set autoindent

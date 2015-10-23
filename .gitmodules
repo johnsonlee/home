@@ -37,3 +37,9 @@
 [submodule ".vim/bundle/vim-powerline-fonts"]
 	path = .vim/bundle/vim-powerline-fonts
 	url = https://github.com/powerline/fonts.git
+[submodule ".vim/bundle/vim-indent-line"]
+	path = .vim/bundle/vim-indent-line
+	url = https://github.com/Yggdroot/indentLine.git
+[submodule ".vim/bundle/vim-supertab"]
+	path = .vim/bundle/vim-supertab
+	url = https://github.com/ervandew/supertab.git
