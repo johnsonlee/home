@@ -12,6 +12,9 @@ let g:indentLine_color_term = 234
 let g:indentLine_color_gui = '#252525'
 let g:indentLine_char = '│'
 
+" nerdtree window size
+let g:NERDTreeWinSize = 50
+
 execute pathogen#infect()
 
 set autoindent
