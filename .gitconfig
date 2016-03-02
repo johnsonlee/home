@@ -11,3 +11,10 @@
 	branch = auto
 [remote "origin"]
 	push = refs/heads/*:refs/for/*
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	unstage = reset HEAD --
+	last = log -1 HEAD
