@@ -7,6 +7,9 @@
 let g:airline#extensions#tabline#enabled=1
 let g:airline_powerline_fonts=1
 
+" golang
+let g:go_version_warning = 0
+
 " vertical line indentation
 let g:indentLine_color_term = 234
 let g:indentLine_color_gui = '#252525'
