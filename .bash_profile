@@ -51,9 +51,22 @@ if ! [ -x "$(command -v jq)" ]; then
 fi
 
 ## Install `html-xml-utils`
-if ! [ -x "$(command -v html-xml-utils)" ]; then
+if [ ! -x "$(command -v hxselect)" ]; then
     brew install html-xml-utils
 fi
 
+## Install `smali`
+if ! [ -x "$(command -v smali)" ]; then
+    brew install smali
+fi
 
+## Install `dex2jar`
+if ! [ -x "$(command -v d2j-dex2jar)" ]; then
+    brew install dex2jar
+fi
+
+## Install `jadx`
+if ! [ -x "$(command -v jadx)" ]; then
+    brew install jadx
+fi
 
