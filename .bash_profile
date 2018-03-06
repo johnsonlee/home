@@ -7,8 +7,8 @@ fi
 #
 # alias
 #
-alias ll='ls -l --color'
-alias la='ls -al --color'
+alias ll='ls -l'
+alias la='ls -al'
 alias grep='grep --color'
 alias logcat='adb logcat'
 alias mvngen='mvn archetype:generate -B -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.1'
