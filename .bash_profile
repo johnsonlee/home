@@ -27,6 +27,11 @@ if [ ! -x "$(command -v tmux)" ]; then
     brew install tmux
 fi
 
+## Install `git`
+if [ ! -x "$(command -v git)" ]; then
+    brew install git
+fi
+
 ## Install `wget`
 if [ ! -x "$(command -v wget)" ]; then
     brew install wget
@@ -121,4 +126,13 @@ fi
 if [ ! -x "$(command -v babel)" ]; then
     brew install babel
 fi
+
+GIT_PS1_SHOWDIRTYSTATE=true
+GIT_PS1_SHOWSTASHSTATE=true
+GIT_PS1_SHOWUNTRACKEDFILES=true
+GIT_PS1_SHOWUPSTREAM="auto"
+GIT_PS1_HIDE_IF_PWD_IGNORED=true
+GIT_PS1_SHOWCOLORHINTS=true
+
+export PROMPT_COMMAND='__git_ps1 "\u@\h \w" " \\\$ "'
 
