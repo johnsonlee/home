@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 ## Alias
 alias ll='ls -l'
@@ -18,6 +18,13 @@ fi
 ## Install `bash-completion`
 if [ ! -e "$(brew --prefix)/etc/bash_completion" ] || [ ! -d "$(brew --prefix)/etc/bash_completion.d" ]; then
     brew install bash-completion
+else
+    . $(brew --prefix)/etc/bash_completion
+fi
+
+## Install `tmux`
+if [ ! -x "$(command -v tmux)" ]; then
+    brew install tmux
 fi
 
 ## Install `wget`
