@@ -134,5 +134,5 @@ GIT_PS1_SHOWUPSTREAM="auto"
 GIT_PS1_HIDE_IF_PWD_IGNORED=true
 GIT_PS1_SHOWCOLORHINTS=true
 
-export PROMPT_COMMAND='__git_ps1 "\u@\h \w" " \\\$ "'
+export PROMPT_COMMAND='__git_ps1 "\u@\h:\w" " \\\$ "'
 
