@@ -1,6 +1,10 @@
 #!/bin/bash
 
+export CLICOLOR=1
+export LSCOLORS=GxFxCxDxBxegedabagaced
+
 ## Alias
+alias ls='ls -G'
 alias ll='ls -l'
 alias la='ls -al'
 alias grep='grep --color'
@@ -134,5 +138,5 @@ GIT_PS1_SHOWUPSTREAM="auto"
 GIT_PS1_HIDE_IF_PWD_IGNORED=true
 GIT_PS1_SHOWCOLORHINTS=true
 
-export PROMPT_COMMAND='__git_ps1 "\u@\h:\w" " \\\$ "'
+export PROMPT_COMMAND='__git_ps1 "\\[$(tput bold)\\]\u\\[$(tput sgr0)\\]@\h:\\[$(tput setaf 4)\\]\w\\[$(tput sgr0)\\]" " \\\$ "'
 
