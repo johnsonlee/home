@@ -36,7 +36,7 @@ if [ -x "$(command -v brew)" ]; then
     fi
 fi
 
-if [ -x "$(command -v __git_ps1)" ]; then
+if [ "$(command -v __git_ps1)" ]; then
     export PROMPT_COMMAND='__git_ps1 "\\[$(tput bold)\\]\u@\h\\[$(tput sgr0)\\]:\\[$(tput setaf 4)\\]\w\\[$(tput sgr0)\\]" " \\\$ "'
 fi
 
