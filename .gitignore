@@ -1,6 +1,7 @@
 .CFUserTextEncoding
 .DS_Store
 .Trash/
+.android/
 .bash_history
 .oracle_jre_usage/
 .ssh/
