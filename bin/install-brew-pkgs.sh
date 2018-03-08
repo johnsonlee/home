@@ -22,7 +22,7 @@ for pkg in $TERM_PACKAGES $JAVA_PACKAGES $NODE_PACKAGES; do
     fi
 done
 
-CASK_PACKAGES="android-file-transfer android-platform-tools android-sdk androidtool"
+CASK_PACKAGES="android-file-transfer android-platform-tools android-sdk"
 
 for pkg in $CASK_PACKAGES; do
     if [ ! "$(brew cask ls --versions $pkg)" ]; then
