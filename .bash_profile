@@ -23,22 +23,20 @@ alias mvngen='mvn archetype:generate -B -DarchetypeGroupId=org.apache.maven.arch
 alias alert='terminal-notifier -title "$([ $? = 0 ] && echo Success || echo Error)" -message "$(history | tail -n1 | sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s* alert.*$//'\'')"'
 
 if [ -x "$(command -v brew)" ]; then
-    if [ "$(brew ls --versions bash-completion)" ] && [ -e "$(brew --prefix)/etc/bash_completion" ]; then
-        . $(brew --prefix)/etc/bash_completion
-    fi
+    [ "$(brew ls --versions bash-completion)" ] && [ -e "$(brew --prefix)/etc/bash_completion" ] && . $(brew --prefix)/etc/bash_completion
 
-    if [ -f "$(brew --prefix)/share/android-sdk" ]; then
-        export ANDROID_SDK_ROOT="$(brew --prefix)/share/android-sdk"
-    fi
-
-    if [ -f "$(brew --prefix)/share/android-ndk" ]; then
-        export ANDROID_NDK_HOME="$(brew --prefix)/share/android-ndk"
-    fi
+    [ -f "$(brew --prefix)/share/android-sdk"    ] && export ANDROID_SDK_ROOT="$(brew --prefix)/share/android-sdk"
+    [ -f "$(brew --prefix)/share/android-ndk"    ] && export ANDROID_NDK_HOME="$(brew --prefix)/share/android-ndk"
+    [ -f "$(brew --prefix)/opt/readline/lib"     ] && export LDFLAGS="$LDFLAGS -L$(brew --prefix)/opt/readline/lib"
+    [ -f "$(brew --prefix)/opt/readline/include" ] && export CPPFLAGS="$CPPFLAGS -I$(brew --prefix)/opt/readline/include"
+    [ -f "$(brew --prefix)/opt/icu4c/lib"        ] && export LDFLAGS="$LDFLAGS -L$(brew --prefix)/opt/icu4c/lib"
+    [ -f "$(brew --prefix)/opt/icu4c/include"    ] && export CPPFLAGS="$CPPFLAGS -I$(brew --prefix)/opt/icu4c/include"
+    [ "$(brew ls --versions groovy)"             ] && export GROOVY_HOME="$(brew --prefix)/opt/groovy/libexec"
 fi
 
 if [ "$(command -v __git_ps1)" ]; then
     export PROMPT_COMMAND='__git_ps1 "\\[$(tput bold)\\]\u@\h\\[$(tput sgr0)\\]:\\[$(tput setaf 4)\\]\w\\[$(tput sgr0)\\]" " \\\$ "'
 fi
 
-export PATH="~/bin:/usr/local/opt/gpg-agent/bin:/usr/local/opt/openssl/bin:/usr/local/bin:/usr/local/sbin:$PATH"
+export PATH="~/bin:/usr/local/opt/gpg-agent/bin:/usr/local/opt/icu4c/bin:/usr/local/opt/icu4c/sbin:/usr/local/opt/openssl/bin:/usr/local/bin:/usr/local/sbin:$PATH"
 
