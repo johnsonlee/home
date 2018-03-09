@@ -3,6 +3,9 @@
 # clean gradle cache
 rm -rvf ~/.android/build-cache
 
+# clean user cache
+rm -rvf ~/.cache
+
 # clean gradle log
 find ~/.gradle \( -name "*.log" -type f -o -name "*.log.*" -type f \) -exec rm -vf {} \;
 
