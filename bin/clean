@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# clean gradle cache
+rm -rvf ~/.android/build-cache
+
+# clean gradle log
+find ~/.gradle \( -name "*.log" -type f -o -name "*.log.*" -type f \) -exec rm -vf {} \;
+
+# clean DingTalk
+rm -rvf ~/Library/Application\ Support/DingTalk
+
+# clean application log
+rm -rvf ~/Library/Logs
+
+# clean xcode archives
+rm -rvf ~/Library/Developer/Xcode/Archives/*
+
+# clean Android Studio Cache
+rm -rvf ~/Library/Caches/AndroidStudio*
+
+# clean Google Chrome Cache
+rm -rvf ~/Library/Caches/Google/Chrome
+
+# clean HomeBrew cache
+rm -rvf ~/Library/Caches/HomeBrew
+
+# clean Yarn cache
+rm -rvf ~/Library/Caches/Yarn
+
