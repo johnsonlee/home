@@ -30,3 +30,8 @@ rm -rvf ~/Library/Caches/HomeBrew
 # clean Yarn cache
 rm -rvf ~/Library/Caches/Yarn
 
+# clean WeChat
+rm -rvf ~/Library/Containers/com.tencent.xinWeChat/Data/Library/Application\ Support/com.tencent.xinWeChat
+rm -rvf ~/Library/Containers/com.tencent.xinWeChat/Data/Library/Application\ Support/Wechat
+rm -rvf ~/Library/Containers/com.tencent.xinWeChat/Data/Library/Caches
+
