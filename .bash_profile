@@ -20,6 +20,7 @@ alias l='ls -CF'
 alias grep='grep --color=auto'
 alias wget='wget --tries=inf -c'
 alias logcat='adb logcat'
+alias realpath='grealpath'
 alias mvngen='mvn archetype:generate -B -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.1'
 alias alert='terminal-notifier -title "$([ $? = 0 ] && echo Success || echo Error)" -message "$(history | tail -n1 | sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s* alert.*$//'\'')"'
 
@@ -39,5 +40,13 @@ if [ "$(command -v __git_ps1)" ]; then
     export PROMPT_COMMAND='__git_ps1 "\\[$(tput bold)\\]\u@\h\\[$(tput sgr0)\\]:\\[$(tput setaf 4)\\]\w\\[$(tput sgr0)\\]" " \\\$ "'
 fi
 
-export PATH="~/bin:/usr/local/opt/gpg-agent/bin:/usr/local/opt/icu4c/bin:/usr/local/opt/icu4c/sbin:/usr/local/opt/openssl/bin:/usr/local/bin:/usr/local/sbin:$PATH"
+export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+
+export PATH="/usr/local/sbin:$PATH"
+export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/opt/openssl/bin:$PATH"
+export PATH="/usr/local/opt/icu4c/sbin:$PATH"
+export PATH="/usr/local/opt/gpg-agent/bin:$PATH"
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+export PATH="~/bin:$PATH"
 
