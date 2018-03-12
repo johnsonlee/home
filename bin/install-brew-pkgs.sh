@@ -12,7 +12,7 @@ for pkg in "gawk grep gnu-sed"; do
     fi
 done
 
-TERM_PACKAGES="bash-completion git gpg gpg-agent html-xml-utils iftop jq pngquant terminal-notifier tmux tree wget"
+TERM_PACKAGES="bash-completion coreutils git gpg gpg-agent html-xml-utils iftop jq pngquant terminal-notifier tmux tree wget"
 JAVA_PACKAGES="antlr aspectj cfr-decompiler gradle groovy maven apktool dex2jar jadx smali"
 NODE_PACKAGES="babel"
 
