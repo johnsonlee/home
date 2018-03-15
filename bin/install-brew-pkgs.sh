@@ -5,8 +5,10 @@ if [ ! -x "$(command -v brew)" ]; then
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
+GNU_PACKAGES="gawk grep gnu-sed"
+
 ## Install GNU packages
-for pkg in "gawk grep gnu-sed"; do
+for pkg in $GNU_PACKAGES; do
     if [ ! "$(brew ls --versions $pkg)" ]; then
         brew install $pkg --with-default-names
     fi
