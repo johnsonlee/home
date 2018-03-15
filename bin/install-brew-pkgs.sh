@@ -10,7 +10,7 @@ GNU_PACKAGES="gawk grep gnu-sed"
 ## Install GNU packages
 for pkg in $GNU_PACKAGES; do
     if [ ! "$(brew ls --versions $pkg)" ]; then
-        brew install $pkg --with-default-names
+        brew install -v $pkg --with-default-names
     fi
 done
 
@@ -20,7 +20,7 @@ NODE_PACKAGES="babel"
 
 for pkg in $TERM_PACKAGES $JAVA_PACKAGES $NODE_PACKAGES; do
     if [ ! "$(brew ls --versions $pkg)" ]; then
-        brew install $pkg
+        brew install -v $pkg
     fi
 done
 
@@ -28,7 +28,7 @@ CASK_PACKAGES="android-file-transfer android-platform-tools android-sdk"
 
 for pkg in $CASK_PACKAGES; do
     if [ ! "$(brew cask ls --versions $pkg)" ]; then
-        brew cask install $pkg
+        brew cask install -v $pkg
     fi
 done
 
