@@ -23,6 +23,7 @@ alias logcat='adb logcat'
 alias realpath='grealpath'
 alias mvngen='mvn archetype:generate -B -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.1'
 alias alert='terminal-notifier -title "$([ $? = 0 ] && echo Success || echo Error)" -message "$(history | tail -n1 | sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s* alert.*$//'\'')"'
+alias systrace='~/Library/Android/sdk/platform-tools/systrace/systrace.py'
 
 if [ -x "$(command -v brew)" ]; then
     [ "$(brew ls --versions bash-completion)" ] && [ -e "$(brew --prefix)/etc/bash_completion" ] && . $(brew --prefix)/etc/bash_completion
