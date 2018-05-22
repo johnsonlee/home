@@ -10,7 +10,7 @@ rm -rvf ~/.cache
 find ~/.gradle \( -name "*.log" -type f -o -name "*.log.*" -type f \) -exec rm -vf {} \;
 
 # clean gradle wrapper
-rm -rvf ~/.gradle/wrapper/dists/*.zip
+rm -rvf ~/.gradle/wrapper/dists/gradle-*
 
 # clean DingTalk
 rm -rvf ~/Library/Application\ Support/DingTalk
