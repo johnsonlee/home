@@ -22,6 +22,7 @@
 .gnupg/
 .gradle/
 .hwid
+.konan
 .lesshst
 .local/
 .m2/
@@ -48,6 +49,8 @@ Applications/
 Desktop/
 Documents/
 Downloads/
+GitBook/
+Google\ Drive/
 Library/
 Movies/
 Music/
