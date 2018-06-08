@@ -2,49 +2,40 @@
 
 # clean gradle cache
 echo -e "\033[32mScanning ~/.android/build-cache ...\033[0m"
-rm -rvf ~/.android/build-cache &
+rm -rvf ~/.android/build-cache
 
 # clean user cache
 echo -e "\033[32mScanning ~/.cache ...\033[0m"
-rm -rvf ~/.cache &
+rm -rvf ~/.cache
 
 # clean gradle log
 echo -e "\033[32mScanning ~/.gradle ...\033[0m"
-find ~/.gradle \( -name "*.log" -type f -o -name "*.log.*" -type f \) -exec rm -vf {} \; &
+find ~/.gradle \( -name "*.log" -type f -o -name "*.log.*" -type f \) -exec rm -vf {} \;
 
 # clean gradle wrapper
-rm -rvf ~/.gradle/wrapper/dists/gradle-* &
+rm -rvf ~/.gradle/wrapper/dists/gradle-*
 
 # clean DingTalk
 echo -e "\033[32mScanning ~/Library/Application\ Support ...\033[0m"
-rm -rvf ~/Library/Application\ Support/DingTalk &
+rm -rvf ~/Library/Application\ Support/DingTalk
 
 # clean application log
 echo -e "\033[32mScanning ~/Library/Logs ...\033[0m"
-rm -rvf ~/Library/Logs &
+rm -rvf ~/Library/Logs
 
 # clean xcode archives
 echo -e "\033[32mScanning ~/Library/Developer/Xcode/Archives ...\033[0m"
-rm -rvf ~/Library/Developer/Xcode/Archives/* &
+rm -rvf ~/Library/Developer/Xcode/Archives/*
 
-# clean Android Studio Cache
+# clean Cache
 echo -e "\033[32mScanning ~/Library/Caches ...\033[0m"
-rm -rvf ~/Library/Caches/AndroidStudio* &
-
-# clean Google Chrome Cache
-rm -rvf ~/Library/Caches/Google/Chrome &
-
-# clean HomeBrew cache
-rm -rvf ~/Library/Caches/HomeBrew &
-
-# clean Yarn cache
-rm -rvf ~/Library/Caches/Yarn &
+rm -rvf ~/Library/Caches
 
 # clean WeChat
 echo -e "\033[32mScanning ~/Library/Containers/com.tencent.xinWeChat ...\033[0m"
-rm -rvf ~/Library/Containers/com.tencent.xinWeChat/Data/Library/Application\ Support/com.tencent.xinWeChat &
-rm -rvf ~/Library/Containers/com.tencent.xinWeChat/Data/Library/Application\ Support/Wechat &
-rm -rvf ~/Library/Containers/com.tencent.xinWeChat/Data/Library/Caches &
+rm -rvf ~/Library/Containers/com.tencent.xinWeChat/Data/Library/Application\ Support/com.tencent.xinWeChat
+rm -rvf ~/Library/Containers/com.tencent.xinWeChat/Data/Library/Application\ Support/Wechat
+rm -rvf ~/Library/Containers/com.tencent.xinWeChat/Data/Library/Caches
 
 # clean iPhone Software Updates
 echo -e "\033[32mScanning ~/Library/iTunes/iPhone Software Updates ...\033[0m"
