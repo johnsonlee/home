@@ -14,9 +14,9 @@ for pkg in $GNU_PACKAGES; do
     fi
 done
 
-TERM_PACKAGES="bash-completion coreutils git gpg gpg-agent html-xml-utils iftop jq pngquant terminal-notifier tmux tree wget"
+TERM_PACKAGES="aria2 bash-completion coreutils git gpg gpg-agent html-xml-utils htop iftop jq pngquant terminal-notifier tmux tree wget"
 JAVA_PACKAGES="antlr aspectj cfr-decompiler gradle groovy maven apktool dex2jar jadx smali"
-NODE_PACKAGES="babel"
+NODE_PACKAGES="babel pm2"
 
 for pkg in $TERM_PACKAGES $JAVA_PACKAGES $NODE_PACKAGES; do
     if [ ! "$(brew ls --versions $pkg)" ]; then
@@ -24,7 +24,7 @@ for pkg in $TERM_PACKAGES $JAVA_PACKAGES $NODE_PACKAGES; do
     fi
 done
 
-CASK_PACKAGES="android-file-transfer android-platform-tools android-sdk"
+CASK_PACKAGES="android-file-transfer android-platform-tools android-sdk aria2gui etcher google-chrome iina iterm2 sublime-text typora"
 
 for pkg in $CASK_PACKAGES; do
     if [ ! "$(brew cask ls --versions $pkg)" ]; then
