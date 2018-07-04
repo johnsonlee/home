@@ -1,0 +1,4 @@
+#!/bin/bash
+
+mdfind "kMDItemCFBundleIdentifier == '`sqlite3 $(find /private/var/folders 2>/dev/null | grep "com.apple.dock.launchpad/db/db$") "SELECT bundleid FROM apps WHERE title='$1';"`'"
+
