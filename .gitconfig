@@ -16,6 +16,7 @@
 	br = branch
 	ci = commit
 	st = status
+	pr = pull --rebase
 	unstage = reset HEAD --
 	last = log -1 HEAD
 	visual = !gitk
